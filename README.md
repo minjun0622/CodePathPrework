@@ -40,14 +40,14 @@ The following **additional** features are implemented:
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-![X]http://g.recordit.co/J5LMFayNQD.gif
-![X]http://g.recordit.co/WAJmpjMpXH.gif
-![X]http://g.recordit.co/KDfFKBHAcC.gif
+<img src="http://g.recordit.co/J5LMFayNQD.gif" width=250><br>
+<img src="http://g.recordit.co/WAJmpjMpXH.gif" width=250><br>
+<img src="http://g.recordit.co/KDfFKBHAcC.gif" width=250><br>
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
-https://www.w3schools.com/
-htt[s://www.stackoverflow.com/
+- https://www.w3schools.com/
+- https://www.stackoverflow.com/
 
 This website helped me understand the syntax in creating loops and implementing the logic behind the skeleton code in the script.js file.
 
