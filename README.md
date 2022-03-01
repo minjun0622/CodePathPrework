@@ -72,7 +72,7 @@ Following along my idea, there could be a scoreboard in which globally, it gives
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+[My 5-minute Interview Recording](https://www.loom.com/share/f2897c718f3a441da7517e626a64f2bd)
 
 
 ## License
