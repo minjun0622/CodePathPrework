@@ -53,6 +53,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 This website helped me understand the syntax in creating loops and implementing the logic behind the skeleton code in the script.js file.
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
+
 The challenge in creating the submission was in first, the implementation of the guess function where I had trouble with understanding the syntax regarding the if statements, and general syntax for the to build the method. I was able to overcome this by looking up examples through a source cited above, w3schools.com to help figure it out. 
 
 The next difficulty, which to me, was the most difficult one, was adding different patterns everytime. Since I am well versed in Java and Python, my first thought process was to iterate through the list with a for loop and change each value inside the array doing patterns[i] = a random number that I got. Instead, I was able to find out through Stack Overflow that to add to a list in Javascript, there is a push method that would push to the end of the list. Therefore, I was able to overcome this part of the additional feature.
@@ -60,11 +61,13 @@ The next difficulty, which to me, was the most difficult one, was adding differe
 In general, most of my difficulties came from implementing additional features as shown in the checklist and in the video. I attempted to implement the extra chance feature to enable the player to have more than one guess. I first defined a global variable called forgiveness and tried to decrement it within an if statement inside the guess method. However, I was able to see that the game did stop after 3 wrong tries. However, it would freeze if I guessed the wrong thing. This was able to be averted by writing playClueSequence() right after the decrementation of the variable to make the website play the same pattern again. 
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
+
 After completing my prework, I became curious into how this work can be split between the frontend and backend engineers. I have experience with frontend and therefore, I understood that that part dealt more into the looks side of the website, dealing with the shape and layout of the buttons and words. If this was a website that I was building from scratch without Glitch, and if I were to be a backend engineer, what would my work look like? Does full-stack mean they would deal with both backend and frontend?
 
 Therefore, I would like to look into the process of how the website gets published with a link and gets connected with a server, something that Glitch is doing automatically. 
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
+
 Some of the things that I would further implement, given more time, is adding a buttong right next to the start/end button that would change the value of the music variable that I have in the code. The music variable, when true, sets the pattern to the notes of Mary Had a Little Lamb. Since the frequency of my buttons represent music notes from C, D, E, F, G, A, this would also be able to be expanded by allowing the users to have the choice between playing a music memory game along the tunes of a specific song they would like. 
 
 Following along my idea, there could be a scoreboard in which globally, it gives points for getting the buttons right in the correct order. Then, the user would put their user name to create competition among users in the website. 
