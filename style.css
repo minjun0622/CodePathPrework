@@ -38,6 +38,13 @@ button {
   display: none;
 }
 
+#startBtn {
+  background: green
+}
+
+#stopBtn {
+  background: red
+}
 
 #button1 {
     background: lightgreen;
