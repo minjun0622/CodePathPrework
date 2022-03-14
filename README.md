@@ -34,8 +34,8 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [X] List anything else that you can get done to improve the app!
-- Set a boolean called music and if that is true, the pattern is set to the tone of Mary Had a Little Lamb instead of generating a random pattern.
+- [X] Set a boolean called music and if that is true, the pattern is set to the tone of Mary Had a Little Lamb instead of generating a random pattern.
+- [X] Start and end buttons are distinguishable by color. Mimics the traffic stop colors, green/red.
 
 ## Video Walkthrough (GIF)
 
