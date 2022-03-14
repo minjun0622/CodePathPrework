@@ -3,11 +3,15 @@ const clueHoldTime = 800; //how long to hold each clue's light/sound
 const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
-var pattern = [3,2,1,2,3,3,3,2,2,2,3,5,5,3,2,1,2,3,3,3,2,2,3,2,1];
-//var pattern = [1,1,1,1,1,1]
+var pattern1 = [3,2,1,2,3,3,3,2,2,2,3,5,5,3,2,1,2,3,3,3,2,2,3,2,1];
+var pattern;
 var progress = 0; 
 var gamePlaying = false;
 var guessCounter = 0;
+var forgiveness = 3;
+var music = false;
+
+const length = 10
 
 var tonePlaying = false;
 var volume = 0.5;  //must be between 0.0 and 1.0
@@ -16,12 +20,28 @@ function startGame(){
     //initialize game variables
   progress = 0;
   gamePlaying = true;
+  forgiveness = 3;
+  if (music) {
+    pattern = pattern1
+  } else {
+    pattern = generatePattern();
+  }
   
   // swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
+  //changePattern()
   playClueSequence()
 }
+
+function generatePattern() {
+  var list = [];
+  for (let i = 0; i < length; i++) {
+    list.push(Math.floor(Math.random() * 6) + 1);
+  }
+  return list;
+}
+
 
 function stopGame() {
   gamePlaying = false;
@@ -75,6 +95,10 @@ function guess(btn){
       guessCounter++;
     }
   } else {
+    forgiveness--;
+    playClueSequence();
+  }
+  if (forgiveness == 0) {
     loseGame();
   }
 }
@@ -98,6 +122,7 @@ const freqMap = {
   5: 391.995,
   6: 440,
 }
+
 function playTone(btn,len){ 
   o.frequency.value = freqMap[btn]
   g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
@@ -118,6 +143,7 @@ function startTone(btn){
 }
 function stopTone(){
   g.gain.setTargetAtTime(0,context.currentTime + 0.05,0.025)
+
   tonePlaying = false
 }
 
@@ -127,6 +153,8 @@ var AudioContext = window.AudioContext || window.webkitAudioContext
 var context = new AudioContext()
 var o = context.createOscillator()
 var g = context.createGain()
+
+
 g.connect(context.destination)
 g.gain.setValueAtTime(0,context.currentTime)
 o.connect(g)
