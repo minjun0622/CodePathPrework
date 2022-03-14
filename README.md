@@ -4,7 +4,7 @@
 
 Submitted by: **Minjun Seo**
 
-Time spent: **6** hours spent in total
+Time spent: **7** hours spent in total
 
 Link to project: (https://oasis-fascinated-thorn.glitch.me/)
 
