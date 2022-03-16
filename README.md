@@ -4,7 +4,7 @@
 
 Submitted by: **Minjun Seo**
 
-Time spent: **7** hours spent in total
+Time spent: **8** hours spent in total
 
 Link to project: (https://oasis-fascinated-thorn.glitch.me/)
 
@@ -25,12 +25,12 @@ The following **optional** features are implemented:
 * [X] Any HTML page elements (including game buttons) has been styled differently than in the tutorial
 * [X] Buttons use a pitch (frequency) other than the ones in the tutorial
 * [X] More than 4 functional game buttons
-* [ ] Playback speeds up on each turn
+* [X] Playback speeds up on each turn
 * [X] Computer picks a different pattern each time the game is played
 * [X] Player only loses after 3 mistakes (instead of on the first mistake)
 * [ ] Game button appearance change goes beyond color (e.g. add an image)
 * [X] Game button sound is more complex than a single tone (e.g. an audio file, a chord, a sequence of multiple tones)
-* [ ] User has a limited amount of time to enter their guess on each turn
+* [X] User has a limited amount of time to enter their guess on each turn
 
 The following **additional** features are implemented:
 
@@ -49,9 +49,10 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 - https://www.w3schools.com/
-- https://www.stackoverflow.com/
+- https://stackoverflow.com/questions/41632942/how-to-measure-time-elapsed-on-javascript
 
 This website helped me understand the syntax in creating loops and implementing the logic behind the skeleton code in the script.js file.
+StackOverflow helped me implement a timer between each turn that I used to keep track of the player during the game. If the player did not make a guess in a set amount of time, then the game would be over and the player would lose.
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 
