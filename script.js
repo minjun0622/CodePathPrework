@@ -1,7 +1,7 @@
 //Global Variables
 const clueHoldTime = 800; //how long to hold each clue's light/sound
-const cluePauseTime = 333; //how long to pause in between clues
-const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
+var cluePauseTime = 333; //how long to pause in between clues
+var nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
 var pattern1 = [3,2,1,2,3,3,3,2,2,2,3,5,5,3,2,1,2,3,3,3,2,2,3,2,1];
 var pattern;
@@ -16,6 +16,10 @@ const length = 10
 var tonePlaying = false;
 var volume = 0.5;  //must be between 0.0 and 1.0
 
+var startTime, endTime;
+var seconds;
+var timeDiff;
+
 function startGame(){
     //initialize game variables
   progress = 0;
@@ -25,6 +29,7 @@ function startGame(){
     pattern = pattern1
   } else {
     pattern = generatePattern();
+  start();
   }
   
   // swap the Start and Stop buttons
@@ -79,6 +84,7 @@ function playClueSequence(){
 }
 
 function guess(btn){
+  start()
   console.log("user guessed: " + btn);
   if(!gamePlaying){
     return;
@@ -89,9 +95,11 @@ function guess(btn){
         winGame();
       } else {
         progress++;
+        cluePauseTime = cluePauseTime - 20
         playClueSequence();
       }
     } else {
+      cluePauseTime = cluePauseTime - 20
       guessCounter++;
     }
   } else {
@@ -100,7 +108,8 @@ function guess(btn){
   }
   if (forgiveness == 0) {
     loseGame();
-  }
+  } 
+  endGame();
 }
 
 function winGame() {
@@ -111,6 +120,21 @@ function winGame() {
 function loseGame(){
   stopGame();
   alert("Game Over. You lost.");
+}
+
+function start() {
+  startTime = new Date();
+};
+
+function endGame() {
+  endTime = new Date();
+  timeDiff = endTime - startTime;
+  timeDiff /= 1000;
+  seconds = Math.round(timeDiff);
+  console.log(seconds);
+  if (seconds > 120) {
+    loseGame();
+  }
 }
 
 // Sound Synthesis Functions
@@ -159,3 +183,4 @@ g.connect(context.destination)
 g.gain.setValueAtTime(0,context.currentTime)
 o.connect(g)
 o.start(0)
+
